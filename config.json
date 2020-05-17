@@ -1,0 +1,35 @@
+{
+  "path": "PROVIDE_PATH_TO_DIRECTORY_WITH_CONFIG_AND_DATA_FILE",
+  "event_name": "PROVIDE_EVENT_NAME",
+  "timestamp_format": "%a %b %d %H:%M:%S +0000 %Y",
+  "trend_interval_detection": {
+    "algorithm": "MOSAIC",
+    "burstiness_min" : 1.5,
+    "maxIntervalSize" : 10,
+    "burstiness_max" : 2.5,
+    "alpha": 0.75,
+    "window_size": 6,
+    "var_threshold": 2
+  },
+  "gibbs_sampling": {
+    "beta_T": [0.1,0.1,0.1],
+    "beta_E": [0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+    "beta_Z": 1,
+    "lambda_TG": 0.1,
+    "lambda_TS": 0.01,
+    "lambda_TE": 0.01,
+    "maximum_iteration": 100,
+    "burn_in": 20,
+    "sample_lag": 2
+  },
+  "emotion":{
+    "emoji_vocabulary_path": "../../Resources/emoji_seed.csv",
+    "emotional_words_corpus_path": "../../Resources/emotional_words_seed.json"
+  },
+  "topics": 5,
+  "intervals":3,
+  "common_generic_threshold": 10,
+  "evaluation": {
+    "no_of_iteration": 5
+  }
+}
