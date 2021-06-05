@@ -1,11 +1,11 @@
-## MOSAIC : Emotion-Aware Event Summarization in Microblogs
+# MOSAIC : Emotion-Aware Event Summarization in Microblogs
 This repository contains the implementation of the project, MOSAIC that generates an emotion-aware event summary from microblogs related to an event. Check the following links for more details.
 
-**Conference Paper**: This work has been presented at SocialNLP 2021 which held in conjuction with TheWebConf 2021. Please refer to the following link for the full paper.
-https://dl.acm.org/doi/10.1145/3442442.3452311
+[**Conference Paper**](https://dl.acm.org/doi/10.1145/3442442.3452311): This work has been presented at SocialNLP 2021 which held in conjuction with TheWebConf 2021.
 
-**Master Thesis**: This work has been done as a Master Thesis in School of Computing, National University of Singapore. Please refer to the following link for the thesis.
-https://scholarbank.nus.edu.sg/handle/10635/188077
+[**Master Thesis**](https://scholarbank.nus.edu.sg/handle/10635/188077): This work has been done as a Master Thesis in School of Computing, National University of Singapore. 
+
+Please cite the paper or thesis if you use our implementation or resources.
 
 ### What is MOSAIC?
 MOSAIC is an event analysis framework that comprises of three stages,
@@ -16,6 +16,9 @@ MOSAIC is an event analysis framework that comprises of three stages,
 To the best of our knowledge, there has been no attempt to generate event summary that includes both topics and their associated users’ emotional reactions.
 
 ### What can MOSAIC do?
+#### 1. Generate Event Summary
+Given a collection of tweets and small [emotional seed](Resources) that contains word to emotion mapping, our framework generates an event summary over time by summarizing each hot topic discussed with a representative tweet and emotional reaction as a probability distribution over predefined set of emotions.
+
 Following figure shows an example of the summary generated using MOSAIC on 3M tweets collected over a period of 60 days during the COVID-19 outbreak.
 <p align="center">
 <img src="SampleSummary/covidOutbreak.PNG" width="600" align="center">
@@ -27,7 +30,20 @@ Following figure shows another example of the factual summarization, and the cor
 <img src="SampleSummary/ontarioElection.PNG" width="600">
 </p>
 
+#### 2. Learn Topics and Emotions
+Given a collection of tweets and small [emotional seed](Resources) that contains word to emotion mapping, out topic-emotion model [ETM](src/TopicModels/MOSAIC.py) can learn coherent topics and their corresponding emotional reaction. Please refer to the [paper](https://dl.acm.org/doi/10.1145/3442442.3452311) or [thesis](https://scholarbank.nus.edu.sg/handle/10635/188077) for further reading.
+
+#### 3. Detect Trend Intervals
+Temporal peaks in microblogs is a good indicator of the emergence of hot topics. Out proposed [trend interval detection]() algorithm can partition
+the life span of an event into a set of time intervals such that each time interval contains some trending topics. 
+
 ### Using MOSAIC
+
+##### Resources
+1. [Emotional Seed Words](Resources/)
+2. Tweets - Please email the [author](mailto:rrubaa.p@sliit.lk)
+3. Ground Truth Summary and Emotion - Please email the [author](mailto:rrubaa.p@sliit.lk)
+
 ##### Required packages
 * tweepy
 * nltk
