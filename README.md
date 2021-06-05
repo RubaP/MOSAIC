@@ -1,7 +1,7 @@
 # MOSAIC : Emotion-Aware Event Summarization in Microblogs
-This repository contains the implementation of the project, MOSAIC that generates an emotion-aware event summary from microblogs related to an event. Check the following links for more details.
+This repository contains the implementation of the project, MOSAIC which generates an emotion-aware event summary from microblogs related to an event. Check the following links for more details.
 
-[**Conference Paper**](https://dl.acm.org/doi/10.1145/3442442.3452311): This work has been presented at SocialNLP 2021 which held in conjuction with TheWebConf 2021.
+[**Conference Paper**](https://dl.acm.org/doi/10.1145/3442442.3452311): This work has been presented at SocialNLP 2021 which held in conjuction with TheWebConf 2021 and published in the Companion Proceedings of the Web Conference 2021.
 
 [**Master Thesis**](https://scholarbank.nus.edu.sg/handle/10635/188077): This work has been done as a Master Thesis in School of Computing, National University of Singapore. 
 
