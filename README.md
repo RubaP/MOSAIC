@@ -1,3 +1,13 @@
+### MOSAIC
+This code contain the implmenetation of the MOSAIC that generates an emotion-aware event summary from micrblogs related to an event. Check the following links for more details.
+
+Conference Paper: This work has been presented at SocialNLP 2021 which held in conjuction with TheWebConf 2021. Please refer to the following link for the full paper.
+https://dl.acm.org/doi/10.1145/3442442.3452311
+
+Thesis: This work has been done as a Master Thesis in School of Computing, National University of Singapore. Please refer to the following link for the thesis.
+https://scholarbank.nus.edu.sg/handle/10635/188077
+
+
 ###### Required packages
 * tweepy
 * nltk
