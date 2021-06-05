@@ -38,21 +38,27 @@ Following figure shows another example of the factual summarization, and the cor
 * twikenizer
 * gensim
 
-##### Collect tweets
+##### Collect Tweets
 * Update twitter API credentials and file location to tweetId in DataCollectionScripts/twitter.py
-* Run DataCollectionScripts/twitter.py to collect the tweets
+* Run [DataCollectionScripts/twitter.py](DataCollectionScripts/twitter.py) to collect the tweets
 * This script saves the necessary information required to run the project as a csv file and also saves the tweet objects as json which is not required to run the project
 
+##### Framework Implementation
+* [trendIntervalDetection.py](src/components/trendIntervalDetection.py) contains the implementation of MOSAIC's trend interval detection algorithm and the existing trend interval detection algorithm OPAD 
+* [topicModels/MOSAIC.py](src/TopicModels/MOSAIC.py) contains the implementation of the proposed topic-emotion model ETM
+* [topicModels/baseT](src/TopicModels/baseT) and [topicModels/baseE](src/TopicModels/baseE) contains the implementation of the existing topic models and topic-sentiment models respectively
+* Given a topic model, our [contentSelection.py](src/components/contentSelection.py) generates the event summary over time by presenting a representative tweet per topic along with the emotional reaction
+
 ##### Evaluation Metrics
-* Evaluation metrics can be found at src/evaluation/metrics
-* All the metrics scripts accept list of src/evaluation/Data objects each representing an interval with information learnt by the models e.g. word dis, emotion dis etc.
-* coherence.py computes the average PMI of top 5,10, and 20 words of given topics learned
-* KLDivergence.py computes the average KL-Divergence of the emotion distributions of all the topics learned
-* rougeScore.py computes rouge value for given reference summary and model summary
+* Evaluation metrics can be found at [metrics](src/evaluation/metrics) folders
+* All the metrics scripts accept list of [Data](src/evaluation/Data.py) objects each representing an interval with information learnt by the models e.g. word dis, emotion dis etc.
+* [coherence.py](src/evaluation/metrics/coherence.py) computes the average PMI of top 5,10, and 20 words of given topics learned
+* [KLDivergence.py](src/evaluation/metrics/KLDivergence.py) computes the average KL-Divergence of the emotion distributions of all the topics learned
+* [rougeScore.py](src/evaluation/metrics/rougeScore.py) computes rouge value for given reference summary and model summary
 
 ##### Running evaluation scripts
-* update config.json
-* run src/evaluation/PMISensitivityAnalysis.py to get PMI value of top 5 words for all the models for range of topics
-* run src/evaluation/TrendIntervalDetection.py to compute to average intervals for range of alpha
-* run src/evaluation/KLDivergence.py to compute KL-Divergence of emotion distribution of all the models
-* run src/evaluation/RougeEvaluation.py to compute average rouge value against three reference summaries for all the models
+* update [configuration](config.json) file
+* run [PMISensitivityAnalysis.py](src/evaluation/PMISensitivityAnalysis.py) to get PMI value of top 5 words for all the models for range of topics
+* run [TrendIntervalDetection.py](src/evaluation/TrendIntervalDetection.py) to compute to average intervals for range of alpha
+* run [EvaluateKLDivergence.py](src/evaluation/EvaluateKLDivergence.py) to compute KL-Divergence of emotion distribution of all the models
+* run [RougeEvaluation.py](src/evaluation/RougeEvaluation.py) to compute average rouge value against three reference summaries for all the models
