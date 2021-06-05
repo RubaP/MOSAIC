@@ -1,5 +1,5 @@
 ### MOSAIC
-This code contain the implmenetation of the MOSAIC that generates an emotion-aware event summary from micrblogs related to an event. Check the following links for more details.
+This code contains the implmenetation of the MOSAIC that generates an emotion-aware event summary from micrblogs related to an event. Check the following links for more details.
 
 Conference Paper: This work has been presented at SocialNLP 2021 which held in conjuction with TheWebConf 2021. Please refer to the following link for the full paper.
 https://dl.acm.org/doi/10.1145/3442442.3452311
