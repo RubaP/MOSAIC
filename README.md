@@ -31,11 +31,15 @@ Following figure shows another example of the factual summarization, and the cor
 </p>
 
 #### 2. Learn Topics and Emotions
-Given a collection of tweets and small [emotional seed](Resources) that contains word to emotion mapping, out topic-emotion model [ETM](src/TopicModels/MOSAIC.py) can learn coherent topics and their corresponding emotional reaction. Please refer to the [paper](https://dl.acm.org/doi/10.1145/3442442.3452311) or [thesis](https://scholarbank.nus.edu.sg/handle/10635/188077) for further reading.
+Given a collection of tweets and small [emotional seed](Resources) that contains word to emotion mapping, out topic-emotion model [ETM](src/TopicModels/MOSAIC.py) can learn coherent topics and their corresponding emotional reaction. Especially, we propose a weakly supervised topic-emotion model that takes into consideration words conveying factual information about a topic, and words expressing the emotions of the users. Please refer to the [paper](https://dl.acm.org/doi/10.1145/3442442.3452311) or [thesis](https://scholarbank.nus.edu.sg/handle/10635/188077) for further reading.
 
 #### 3. Detect Trend Intervals
 Temporal peaks in microblogs is a good indicator of the emergence of hot topics. Out proposed [trend interval detection]() algorithm can partition
-the life span of an event into a set of time intervals such that each time interval contains some trending topics. 
+the life span of an event into a set of time intervals such that each time interval contains some trending topics. The algorithm uses a weighted moving
+mean and variance to locate surges in the microblogs collection. Please refer to the [paper](https://dl.acm.org/doi/10.1145/3442442.3452311) or [thesis](https://scholarbank.nus.edu.sg/handle/10635/188077) for further reading. Following figure shows the trend intervals identified by trend intervals identified by MOSAIC versus OPAD on the Typhoon Hagupit dataset.
+<p align="center">
+<img src="SampleSummary/trends.PNG" width="600">
+</p>
 
 ### Using MOSAIC
 
