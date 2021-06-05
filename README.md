@@ -7,7 +7,26 @@ https://dl.acm.org/doi/10.1145/3442442.3452311
 Thesis: This work has been done as a Master Thesis in School of Computing, National University of Singapore. Please refer to the following link for the thesis.
 https://scholarbank.nus.edu.sg/handle/10635/188077
 
+## What is MOSAIC?
+MOSAIC is an event analysis framework that comprises of three stages,
+1. **A trend interval detection algorithm** to determine the granularity over the event timeline for discovering the hot topics while minimizing potential information loss
+2. **A weakly supervised learning approach** to learn coherent topics and their corresponding emotional reactions in each trend interval
+3. **An event summary generator** that gives representative microblogs and emotion distributions associated with the topics over time
 
+To the best of our knowledge, there has been no attempt to generate event summary that includes both topics and their associated users’ emotional reactions.
+
+## What can MOSAIC do?
+Following figure shows an example of the summary generated using MOSAIC on 3M tweets collected over a period of 60 days during the COVID-19 outbreak.
+
+<img src="SampleSummary/covidOutbreak.png" width="200">
+
+Following figure shows another example of the factual summarization, and the corresponding users’ reaction, on the various issues that have surfaced during the
+2018 Ontario election.
+
+<img src="SampleSummary/ontarioElection.png" width="200">
+
+
+## Using MOSAIC
 ###### Required packages
 * tweepy
 * nltk
