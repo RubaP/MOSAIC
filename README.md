@@ -1,4 +1,4 @@
-### MOSAIC
+### MOSAIC : Emotion-Aware Event Summarization in Microblogs
 This code contains the implementation of the project, MOSAIC that generates an emotion-aware event summary from microblogs related to an event. Check the following links for more details.
 
 Conference Paper: This work has been presented at SocialNLP 2021 which held in conjuction with TheWebConf 2021. Please refer to the following link for the full paper.
