@@ -17,14 +17,15 @@ To the best of our knowledge, there has been no attempt to generate event summar
 
 ## What can MOSAIC do?
 Following figure shows an example of the summary generated using MOSAIC on 3M tweets collected over a period of 60 days during the COVID-19 outbreak.
-
-<img src="SampleSummary/covidOutbreak.png" width="200">
+<p align="center">
+<img src="SampleSummary/covidOutbreak.PNG" width="600" align="center">
+</p>
 
 Following figure shows another example of the factual summarization, and the corresponding users’ reaction, on the various issues that have surfaced during the
 2018 Ontario election.
-
-<img src="SampleSummary/ontarioElection.png" width="200">
-
+<p align="center">
+<img src="SampleSummary/ontarioElection.PNG" width="600">
+</p>
 
 ## Using MOSAIC
 ###### Required packages
